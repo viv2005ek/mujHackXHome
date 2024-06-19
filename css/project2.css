@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+.project2 {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/MUJ\ Premier\ Hackathon\ MUJHackX.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.project2 .nav {
+    height: 114px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.project2 .nav .logo img {
+    height: 50px;
+    width: 162px;
+}
+
+.project2 .nav .anchorTags {
+    width: 60%;
+    min-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.project2 .nav .anchorTags a {
+    font-size: 23px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: all .2s ease;
+    transform-origin: center;
+}
+
+.project2 .nav .anchorTags a:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.project2 .nav .togglemenu {
+    display: none;
+}
+
+.project2 .nav .togglemenu button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: white;
+    z-index: 1;
+    background: #2c005b;
+    position: relative;
+    font-weight: 1000;
+    font-size: 20px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+.project2 .nav .togglemenu button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: white;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+.project2 .nav .togglemenu button:hover {
+    color: #2c005b;
+    cursor: pointer;
+}
+
+.project2 .nav .togglemenu button:hover::before {
+    width: 100%;
+}
+
+.navigationMenu {
+    height: 100vh;
+    width: 100vw;
+    background: #2c005b;
+    position: fixed;
+    z-index: 100;
+    visibility: hidden;
+}
+
+.navigationMenu p {
+    color: white;
+    display: inline;
+    position: relative;
+    top: 20vh;
+    left: 70vw;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.navigationMenu .navIndex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    top: 35vh;
+}
+
+.navigationMenu .navIndex a {
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .2s ease;
+    transform-origin: center;
+}
+
+.navigationMenu .navIndex a:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.visible {
+    visibility: visible;
+}
+
+@media (max-width:1023px) {
+    .project2 .nav .togglemenu {
+        display: flex;
+    }
+    .project2 .nav .anchorTags {
+        display: none;
+    }
+}
+
+.content2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    color: white;
+}
+
+.content2 h1 {
+    font-size: 80px;
+    font-family: sans-serif;
+    background-image: url(../images/textImage.png);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: contain;
+    background-position: center;
+    background-clip: text;
+    color: transparent;
+    z-index: 1;
+    font-weight: 800;
+    -webkit-text-stroke: 2px white;
+    text-align: center;
+    line-height: 100px;
+}
+
+.content2 h2 {
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-align: center;
+    line-height: 100px;
+    /* -webkit-text-stroke: 2px white; */
+}
+
+.content2 p {
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: 400;
+    text-align: center;
+    line-height: 100px;
+}
+
+.content2 .content2Typing {
+    font-size: 40px;
+    font-family: sans-serif;
+    background: linear-gradient(to bottom right, #8201df 40%, transparent 60%, #041bac 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: contain;
+    background-position: center;
+    background-clip: text;
+    color: transparent;
+    z-index: 1;
+    font-weight: 800;
+    -webkit-text-stroke: 2px white;
+    text-align: center;
+    line-height: 100px;
+}
+
+@media (max-width:767px) {
+    .content2 h1 {
+        font-size: 70px;
+    }
+    .content2 h2 {
+        font-size: 50px;
+    }
+    .content2 p {
+        font-size: 45px;
+    }
+    .content2 .content2Typing {
+        font-size: 35px;
+    }
+}
+
+@media (max-width:590px) {
+    .content2 h1 {
+        font-size: 60px;
+    }
+    .content2 h2 {
+        font-size: 40px;
+    }
+    .content2 p {
+        font-size: 35px;
+    }
+    .content2 .content2Typing {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:450px) {
+    .content2 .content2Typing {
+        margin-bottom: 100px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width:390px) {
+    .content2 h2 {
+        font-size: 35px;
+    }
+    .content2 p {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:335px) {
+    .content2 h1 {
+        font-size: 53px;
+    }
+    .content2 h2 {
+        font-size: 30px;
+    }
+    .content2 p {
+        font-size: 25px;
+    }
+}
